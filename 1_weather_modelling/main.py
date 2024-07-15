@@ -1,6 +1,6 @@
 def temp(a, b, c, t):
     return a * t**2 + b * t + c
-with open('s3.txt', 'r') as f:
+with open('input.txt', 'r') as f:
     l = f.readlines()
     a = float(l[0].strip())
     b = float(l[1].strip())
