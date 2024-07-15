@@ -1,9 +1,14 @@
-def temp(a, b, c, t):
-    return a * t**2 + b * t + c
-with open('input.txt', 'r') as f:
-    l = f.readlines()
-    a = float(l[0].strip())
-    b = float(l[1].strip())
-    c = float(l[2].strip())
-    t = float(l[3].strip())
-print("At time ",t,",the temperature is : ",temp(a,b,c,t))
+def calculate_temperature(a, b, c, time):
+    return a * time**2 + b * time + c
+
+with open('input', 'r') as file:
+    lines = file.readlines()
+
+for line in lines:
+    parts = line.strip().split()
+    a = float(parts[0])
+    b = float(parts[1])
+    c = float(parts[2])
+    time = float(parts[3])
+    temperature = calculate_temperature(a, b, c, time)
+    print(f"At time {time}, the temperature is {temperature}")
